@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14110e;
+  --color-paper: #f6f1e8;
+  --color-fg: #1c1714;
+  --color-muted: #8c8176;
+  --color-line: #e6dfd4;
+  --color-seal: #c4452d;
+  --font-sans: "Outfit", "Avenir Next", system-ui, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --radius-card: 1.25rem;
+  --radius-control: 0.875rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    background: var(--color-ink);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-seal);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-seal) 28%, white);
+    color: var(--color-fg);
+  }
+}
+
+@keyframes airi-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: airi-rise 420ms ease-out both;
+}
+
+.caret {
+  display: inline-block;
+  width: 0.45rem;
+  height: 1em;
+  margin-left: 0.15rem;
+  vertical-align: text-bottom;
+  background: var(--color-seal);
+  animation: airi-blink 1s steps(1) infinite;
+}
+
+@keyframes airi-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .caret {
+    animation: none;
+  }
+}

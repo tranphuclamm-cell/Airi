@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Airi">
+  <rect width="32" height="32" rx="7" fill="#14110E"/>
+  <circle cx="16" cy="16" r="12.4" fill="#C4452D"/>
+  <circle cx="16" cy="16" r="10.15" fill="none" stroke="#F6F1E8" stroke-width="1.35"/>
+  <path fill="#F6F1E8" fill-rule="evenodd" d="M16 8.15 21.55 23.15h-2.85l-1.15-3.35h-3.1l-1.15 3.35H10.45L16 8.15zm0 5.55-1.05 3.05h2.1L16 13.7z"/>
+</svg>
